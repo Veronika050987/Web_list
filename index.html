@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>List</title>
+    <link rel="icon" href="list.ico">
+    <style>
+        .red-text {
+            color: red;
+            font-weight: bold;
+        }
+
+        #photoshop-list {
+            list-style-type: lower-alpha; /* Устанавливаем тип нумерации: строчные буквы (a, b, c...) */
+            list-style-position: inside; /* Опционально: позволяет цифре быть ближе к тексту */
+        }
+
+        /*#photoshop-list ::marker {
+            content: counter(marker) ") ";*/ /* Добавляем скобку после буквы */
+        /*}*/
+    </style>
+</head>
+<body>
+    <h1>List</h1>
+    <ol>
+        <li>
+            <span class="red-text">Photoshop</span>
+            <ul id="photoshop-list">
+                <li>Интерфейс</li>
+                <li>Эффекты</li>
+                <li>Инструменты</li>
+                <li>Практика</li>
+            </ul>
+        </li>
+        <li>
+            Illustrator
+            <ul>
+                <li>Интерфейс</li>
+                <li>Инструменты</li>
+                <li>Практика</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
