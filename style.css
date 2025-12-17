@@ -2,10 +2,5 @@
     font-weight: 800;
 }
 ol {
-  counter-reset: count;
-}
-
-ol li {
-  list-style-type: none;
-  position: relative;
+    list-style: upper-roman;
 }
