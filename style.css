@@ -18,5 +18,4 @@ ol li:before {
   padding:0 5px;
   border-radius:50%;
   color:#fff;
-  background:var(--c,red);
 }
