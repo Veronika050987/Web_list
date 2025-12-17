@@ -21,6 +21,11 @@ ol {
     font-weight: bold;
 }
 
+.blue-text {
+    color: deepskyblue;
+    font-weight: bold;
+}
+
 #photoshop-list {
     list-style-type: lower-alpha; /* Устанавливаем тип нумерации: строчные буквы (a, b, c...) */
     list-style-position: inside; /* Опционально: позволяет цифре быть ближе к тексту */
