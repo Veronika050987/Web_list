@@ -2,5 +2,21 @@
     font-weight: 800;
 }
 ol {
-    list-style: upper-roman;
+  counter-reset: count;
+}
+
+ol li {
+  list-style-type: none;
+  position: relative;
+}
+
+ol li:before {
+  counter-increment: count;
+  content: counter(count)" ";
+  margin-right: 0.5em;
+  display:inline-block;
+  padding:0 5px;
+  border-radius:50%;
+  color:#fff;
+  background:var(--c,red);
 }
