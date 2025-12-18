@@ -76,10 +76,10 @@ p {
 /* Стили для старых элементов списка, чтобы не мешать */
 .unrelated-text {
     padding-left: 60px;
-    /* 1. Скрываем стандартный чекбокс */
-    .custom-checkbox-wrapper input[type="checkbox"]
+}
 
-{
+/* --- Стили для Кастомного Крестика (X) --- */
+.custom-checkbox-wrapper input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -87,7 +87,6 @@ p {
     width: 0;
 }
 
-/* 2. Создаем видимый квадрат/круг для чекбокса */
 .custom-checkbox-wrapper .checkmark {
     display: inline-block;
     position: relative;
@@ -97,51 +96,11 @@ p {
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-right: 8px;
-    flex-shrink: 0; /* Предотвращает сжатие элемента */
+    flex-shrink: 0;
 }
 
-    /* 3. Стили для Крестика (X) - НЕ отображается по умолчанию */
-    .custom-checkbox-wrapper .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none; /* Скрываем по умолчанию */
-    }
-
-/* 4. Показываем крестик, когда чекбокс отмечен */
-.custom-checkbox-wrapper input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* 5. Рисуем сам крестик (X) с помощью двух линий */
 .custom-checkbox-wrapper .checkmark:after {
-    left: 5px;
-    top: 1px;
-    width: 5px;
-    height: 10px;
-    border: solid white; /* Цвет линии крестика */
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
-
-/* Чтобы X выглядел как крестик, а не как галочка, рисуем его двумя частями
-           (Для простоты часто используют косую черту или символ, но нарисуем классический X) */
-.custom-checkbox-wrapper .checkmark:after {
-    /* Переопределяем стили для X */
-    transform: rotate(45deg);
-    /* Чтобы отрисовать X, нужно две линии, но для простоты часто рисуют одну часть */
-    /* Давайте нарисуем две, чтобы получить полноценный крестик */
-    content: 'X'; /* Простейший способ, но не кастомизируемый */
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 16px;
-    text-align: center;
-    display: block;
-}
-
-/* Если мы используем символ 'X', убираем стили border-width */
-.custom-checkbox-wrapper .checkmark:after {
-    content: 'X';
+    content: "X";
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -149,18 +108,16 @@ p {
     text-align: center;
     width: 100%;
     height: 100%;
-    border: none; /* Убираем, если были */
+    display: none; /* Прячем по умолчанию */
 }
 
-/* Стили, которые применяются к контейнеру "Расширения" */
+.custom-checkbox-wrapper input:checked ~ .checkmark:after {
+    display: block; /* Показываем при checked */
+}
+
 .extensions-container {
     display: flex;
     align-items: center;
-    padding-left: 90px;
-    margin-top: 5px;
+    /* Отступ вправо теперь задается через <p> родителя, 
+        но flexbox помогает выровнять чекбокс и текст */
 }
-
-    /* Убираем лишние стили с этого P */
-    /*.extensions-container span {
-        padding: 0;
-    }*/
