@@ -3,69 +3,44 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>List</title>
+    <title>Список с чекбоксами и кругом</title>
     <link rel="icon" href="list.ico">
     <link rel="stylesheet" href="style.css">
-    <!--<style>
-        .red-text {
-            color: red;
-            font-weight: bold;
-        }
-
-        .orange-text{
-            color: orange;
-            font-weight: bold;
-        }
-        .green-text{
-            color: green;
-            font-weight: bold;
-        }
-
-        #photoshop-list {
-            list-style-type: lower-alpha; /* Устанавливаем тип нумерации: строчные буквы (a, b, c...) */
-            list-style-position: inside; /* Опционально: позволяет цифре быть ближе к тексту */
-        }
-
-    </style>-->
+    
 </head>
 <body>
-    <h1>List</h1>
-    <ol>
-        <li>
-            <span class="red-text">Photoshop</span>
-            <ul id="photoshop-list">
-                <li>Интерфейс</li>
-                <li>Эффекты</li>
-                <li>Инструменты</li>
-                <li>Практика</li>
-            </ul>
-        </li>
-        <li>
-            <span class="orange-text">Illustrator</span>
-            <ul id="photoshop-list">
-                <li>Интерфейс</li>
-                <li>Инструменты</li>
-                <li>Практика</li>
-            </ul>
-        </li>
-        <li>
-            <span class="green-text">Верстка</span>
-            <ul id="photoshop-list">
-                <li>XHTML</li>
-                <img src="orange.ico">Основы
-                <br>
-                <img src="orange.ico">Способы верстки
-                <br>
-                <li>CSS</li>
-            </ul>
-        </li>
-        <li>
-            <span class="blue-text">Верстка</span>
-            <ul id="photoshop-list">
-                <li>Анимация</li>
-                <li>Action Script</li>
-            </ul>
-        </li>
-    </ol>
+    <h1>Список с чекбоксами и кругом</h1>
+    <p><span style="color: #ff0000;">I. Photoshop</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">a. Интерфейс</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">b. Эффекты</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">c. Инструменты</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">d. Практика</span></p>
+
+    <p><span style="color: #ffff00;">II. Illustrator</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">a. Интерфейс</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">b. Инструменты</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">c. Практика</span></p>
+
+    <p><span style="color: #008000;">III. Верстка</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">a. XHTML</span></p>
+    <!-- Секция с чекбоксом (без изменений) -->
+    <p class="red-dot-marker unrelated-text">
+        <span style="color: #000000;">Основы</span>
+    </p>
+    <!-- ДОБАВЛЕНИЕ КРАСНОГО КРУГА К "Способы верстки" -->
+    <p class="red-dot-marker unrelated-text">
+        <span style="color: #000000;">Способы верстки:</span>
+    </p>
+
+    <p style="padding-left: 90px;">
+        <span style="color: #000000;">
+    <div class="checkbox-container">
+                <input type="checkbox" id="osnovy_checkbox" checked>Таблицы
+        </span>
+    </p>
+    </div>
+    <p style="padding-left: 30px;"><span style="color: #000000;">b. CSS</span></p>
+
+
 </body>
 </html>

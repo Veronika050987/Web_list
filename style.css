@@ -2,31 +2,55 @@
     font-weight: 800;
 }
 
-ol {
-    list-style: upper-roman;
+/* --- Общие стили --- */
+.styled-block {
+    height: 60px;
+    width: 100%;
+    background-color: #FF22B5;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    line-height: 60px;
 }
 
-.red-text {
-    color: red;
-    font-weight: bold;
+p {
+    margin: 5px 0;
 }
 
-.orange-text {
-    color: orange;
-    font-weight: bold;
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
 }
 
-.green-text {
-    color: green;
-    font-weight: bold;
+/* --- Стили для маркера (Красный круг) --- */
+.red-dot-marker::before {
+    content: ''; /* Обязательно для создания псевдоэлемента */
+    display: inline-block; /* Чтобы вести себя как элемент в строке */
+    /* Создание круга */
+    width: 20px;
+    height: 20px;
+    //background-color: #1F7E0;
+    border-radius: 50%; /* Делает квадрат кругом */
+    background: linear-gradient(DarkOrange, Yellow);
+    color: transparent;
+    display: inline-block;
+    position: relative;
+    /* Расположение */
+    margin-right: 8px; /* Отступ между кругом и текстом */
+    /* Вертикальное выравнивание, чтобы круг не "тонул" в тексте */
+    vertical-align: middle;
 }
 
-.blue-text {
-    color: deepskyblue;
-    font-weight: bold;
+/* Убираем лишний отступ у span, чтобы текст был ближе к кругу */
+.red-dot-marker span {
+    padding-left: 0 !important;
 }
 
-#photoshop-list {
-    list-style-type: lower-alpha; /* Устанавливаем тип нумерации: строчные буквы (a, b, c...) */
-    list-style-position: inside; /* Опционально: позволяет цифре быть ближе к тексту */
+/* Стили для старых элементов списка, чтобы не мешать */
+.unrelated-text {
+    padding-left: 60px;
 }
