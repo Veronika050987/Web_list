@@ -161,7 +161,6 @@ p {
 }
 
     /* Убираем лишние стили с этого P */
-    .extensions-container span {
+    /*.extensions-container span {
         padding: 0;
-    }
-}
+    }*/
