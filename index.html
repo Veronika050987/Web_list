@@ -5,8 +5,63 @@
     <meta charset="utf-8" />
     <title>Список с чекбоксами и кругом</title>
     <link rel="icon" href="list.ico">
-    <link rel="stylesheet" href="style.css">
-    
+    <style>
+        body {
+            font-weight: 800;
+        }
+        /* --- Общие стили --- */
+        .styled-block {
+            height: 60px;
+            width: 100%;
+            background-color: #FF22B5;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 16px;
+            padding: 0;
+            border-radius: 15px;
+            cursor: pointer;
+            line-height: 60px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            padding-left: 90px;
+        }
+
+        /* --- Стили для маркера (Красный круг) --- */
+        .red-dot-marker::before {
+            content: ''; /* Обязательно для создания псевдоэлемента */
+            display: inline-block; /* Чтобы вести себя как элемент в строке */
+            /* Создание круга */
+            width: 20px;
+            height: 20px;
+            //background-color: #1F7E0;
+            border-radius: 50%; /* Делает квадрат кругом */
+            background: linear-gradient(DarkOrange, Yellow);
+            color: transparent;
+            display: inline-block;
+            position: relative;
+            /* Расположение */
+            margin-right: 8px; /* Отступ между кругом и текстом */
+            /* Вертикальное выравнивание, чтобы круг не "тонул" в тексте */
+            vertical-align: middle;
+        }
+
+        /* Убираем лишний отступ у span, чтобы текст был ближе к кругу */
+        .red-dot-marker span {
+            padding-left: 0 !important;
+        }
+
+        /* Стили для старых элементов списка, чтобы не мешать */
+        .unrelated-text {
+            padding-left: 60px;
+        }
+    </style>    
 </head>
 <body>
     <h1>Список с чекбоксами и кругом</h1>
@@ -16,7 +71,7 @@
     <p style="padding-left: 30px;"><span style="color: #000000;">c. Инструменты</span></p>
     <p style="padding-left: 30px;"><span style="color: #000000;">d. Практика</span></p>
 
-    <p><span style="color: #ffff00;">II. Illustrator</span></p>
+    <p><span style="color: ##FFA500;">II. Illustrator</span></p>
     <p style="padding-left: 30px;"><span style="color: #000000;">a. Интерфейс</span></p>
     <p style="padding-left: 30px;"><span style="color: #000000;">b. Инструменты</span></p>
     <p style="padding-left: 30px;"><span style="color: #000000;">c. Практика</span></p>
@@ -34,13 +89,39 @@
 
     <p style="padding-left: 90px;">
         <span style="color: #000000;">
-    <div class="checkbox-container">
+            <div class="checkbox-container">
                 <input type="checkbox" id="osnovy_checkbox" checked>Таблицы
         </span>
     </p>
     </div>
-    <p style="padding-left: 30px;"><span style="color: #000000;">b. CSS</span></p>
 
+    <p style="padding-left: 90px;">
+        <span style="color: #000000;">
+            <div class="checkbox-container">
+                <input type="checkbox" id="osnovy_checkbox" checked>Фреймы
+        </span>
+    </p>
+    </div>
+
+    <p style="padding-left: 90px;">
+        <span style="color: #000000;">
+            <div class="checkbox-container">
+                <input type="checkbox" id="osnovy_checkbox" checked>Вёрстка тегами div
+        </span>
+    </p>
+    </div>
+
+    <p style="padding-left: 30px;"><span style="color: #000000;">b. CSS</span></p>
+    <p class="red-dot-marker unrelated-text">
+        <span style="color: #000000;">Основы</span>
+    </p>
+    <p class="red-dot-marker unrelated-text">
+        <span style="color: #000000;">Перечень свойств</span>
+    </p>
+
+    <p><span style="color: #00bfff;">IV. Flash</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">a. Анимация</span></p>
+    <p style="padding-left: 30px;"><span style="color: #000000;">b. Action Script</span></p>
 
 </body>
 </html>
