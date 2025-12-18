@@ -118,6 +118,7 @@ p {
 .extensions-container {
     display: flex;
     align-items: center;
+    padding-left: 140px;
     /* Отступ вправо теперь задается через <p> родителя, 
         но flexbox помогает выровнять чекбокс и текст */
 }
